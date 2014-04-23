@@ -1,0 +1,48 @@
+.navbar-mobile{
+	position: fixed;	
+	//z-index: 999999999999999 !important;
+	width: 100%;
+	font-family: @share;
+	bottom: 0;
+	box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.7);
+	a{
+		text-decoration: none;
+		color: @whitetext;
+	}
+	ul{
+		li{
+			width: 25%;
+			height: 48px;
+			padding: 6px 0 10px 0;
+			float: left;
+			.css-gradient(lighten(@green, 15%),@green);
+			text-align: center;
+			list-style: none;
+			border-right: 1px solid darken(@green, 2%);
+			&:last-child{
+				border-right: none;
+			}
+		}
+	}
+}
+.icon-mobile--menu{
+	width: 20px;
+	height: 20px;
+	padding-bottom: 2px;
+}
+/* SLIDE MENU TWEAK */
+#slidemenu{
+	//background-color: @green;
+	.mm-list * {
+  		font-family: @share;
+  		color: @whitetext;
+	}
+}
+#nav-mob-2-select{
+	.css-gradient(darken(@green, 5%),@green);
+	display: none;
+}
+#nav-mob-3-select {
+	.css-gradient(darken(@green, 5%),@green);
+	display: none;
+}

@@ -1,0 +1,28 @@
+/*------------------------------------*\
+    $COLUMNS
+\*------------------------------------*/
+/**
+ * Here we can set elements in columns of text using CSS3, e.g.:
+ *
+   <p class=text-cols-2>
+ *
+ */
+.text-cols,
+.text-cols-2,
+.text-cols-3,
+.text-cols-4,
+.text-cols-5{
+    .vendor(column-gap, 0px + @base-spacing-unit);
+}
+.text-cols-2{
+    .vendor(column-count, 2);
+}
+.text-cols-3{
+   .vendor(column-count, 3);
+}
+.text-cols-4{
+    .vendor(column-count, 4);
+}
+.text-cols-5{
+    .vendor(column-count, 5);
+}

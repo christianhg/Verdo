@@ -1,0 +1,91 @@
+---
+layout: default
+protected: true
+---
+include ../partials/mixins
+
+//- Content
+.pageContent.clearfix
+	h1 Vedvarende energi
+
+	//- Solceller
+	.contentArea.clearfix#solceller
+		h2 Solceller
+		.grid.one-half
+			p Når du køber solceller, vil det med garanti kunne mærkes på din elregning. Solceller kan gøre dig selvforsynende med el, hvilket betyder, at du ikke længere skal bekymre dig om de stigende priser på olie og andre fossile brændstoffer. 
+			.buttons.one-whole
+				.grid.btn.one-half.btn1 Læs mere
+				.grid.btn.one-half.btn2 Bestil
+
+		.grid.one-half
+			img(src="assets/img/solceller.jpg")
+
+	//- Solvarme	
+	.contentArea.clearfix#solvarme
+		h2 Solvarme
+		.grid.one-half
+			img(src="assets/img/solvarme.jpg", alt="solvarme")
+
+		.grid.one-half
+			p Køb et solvarmeanlæg og få et grønt supplement til husets øvrige energiforsyning. Solvarmeanlægget producerer varme, når solfangeren rammes af sollys. Både den direkte og diffuse indstråling medvirker til energiproduktionen.
+			.buttons.one-whole
+				.grid.btn.one-half.btn1 Læs mere
+				.grid.btn.one-half.btn2 Bestil
+
+	//- Stokerfyr
+	.contentArea.clearfix#stokerfyr
+		h2 Stokerfyr
+		.grid.one-half
+			p Fyr med biobrændsel og spar penge og CO2. Stokerfyret er det perfekte alternativ til for eksempel oliefyr – både miljømæssigt og økonomisk.
+			.buttons.one-whole
+				.grid.btn.one-half.btn1 Læs mere
+				.grid.btn.one-half.btn2 Bestil
+
+		.grid.one-half
+			img(src="assets/img/placeholder_img.jpg")
+
+	//- Jordvarme
+	.contentArea.clearfix#jordvarme
+		h2 Jordvarme
+		.grid.one-half
+			img(src="assets/img/placeholder_img.jpg")
+		.grid.one-half
+			p Et jordvarmeanlæg er den mest energieffektive varmepumpeløsning, der findes - og den er tilmed miljøvenlig og billig. Den er brugbar, hvad enten du er nybygger, er i gang med renovering af huset eller blot ønsker at skifte din nuværende varmekilde. Det betyder, at du vil spare penge selv når det er lettere overskyet, da solvarmeanlægget også her vil producere miljøvenlig varme. Solvarme er effektivt til både nye og ældre huse. Et nyt solvarmeanlæg kan supplere alle vandbårne varmesystemer.
+			.buttons.one-whole
+				.grid.btn.one-half.btn1 Læs mere
+				.grid.btn.one-half.btn2 Bestil
+
+	//- Varmepumper
+	.contentArea.clearfix#varmepumper
+		h2 Varmepumper
+		.grid.one-half
+			p En varmepumpe er en økonomisk og miljømæssig fordelagtig løsning til opvarmning af bolig og brugsvand. 
+
+			.buttons.one-whole
+				.grid.btn.one-half.btn1 Læs mere
+				.grid.btn.one-half.btn2 Bestil
+
+		.grid.one-half
+			img(src="assets/img/placeholder_img.jpg")
+	
+	//- Bestil
+	.contentArea.clearfix#bestil
+		h2 Bestil vedvarende energi
+
+		form(role="form")
+			.form-group.grid.one-whole
+				label Navn
+				input.form-control 
+				label Adresse
+				input.form-control
+			.form-group.grid.one-half
+				label Postnummer
+				input.form-control
+			.form-group.grid.one-half
+				label By
+				input.form-control
+			.form-group.grid.one-whole
+				label Telefonnummer
+				input.form-control
+			.form-group.grid
+				button.btn.btn-success Send

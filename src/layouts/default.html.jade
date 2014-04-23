@@ -1,0 +1,193 @@
+doctype 5
+html.no-js(lang="dk")
+  head
+      meta(charset="utf-8")
+      meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+      //- Fav icon
+      link(rel="icon", href="assets/img/favicon.png", type="image/x-icon") 
+      //- Output DocPad produced meta elements
+      != getBlock('meta').toHTML()
+
+      title Verdo
+
+      meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable = no")
+      //- Shims: IE6-8 support of HTML5 elements
+      //if lt IE 9
+        script(async src="http://html5shim.googlecode.com/svn/trunk/html5.js")
+      //- JS
+      script(src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js")
+      script(src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js")
+      script(src="assets/scripts/mmenu_source/jquery-mmenu-min-all.js")
+      script(src="assets/scripts/main.js")
+      script(src="assets/scripts/bootstrap.js")
+      script(src="assets/scripts/desktop_menu.js")
+      != getBlock("styles").add(["/assets/stylesheets/main.css"]).toHTML()
+  body
+    #page
+      //- Header nav here
+      .navbar-desktop
+        .menu1
+          ul
+            a(href="privat.html")#privat
+              li Privat
+            a(href="index.html")#erhverv
+              li Erhverv
+            a(href="#")
+              li Mit Verdo
+            a(href="#")
+              li Om Verdo
+        .menu2
+          ul.menu2--ul
+            //- Erhverv
+            a(href="index.html")
+              img(src="assets/img/logo_desktop.png", alt="LOGO").desktop-logo
+            .menu-wrapper
+              a(href="#")
+                li El
+              a(href="#")
+                li Vand
+              a(href="#")
+                li  Varme
+              a(href="#")  
+                li Internet
+              a(href="#")
+                li Telefoni
+              a(href="#")
+                li Rådgivning
+              a(href="alarm_og_sikring.html", data-menu="erhverv")
+                li Alarm & Sikring
+              a(href="vedvarende_energi.html", data-menu="erhverv")
+                li Vedvarende energi
+            .search søg på verdo.dk
+              img(src="assets/img/icons/search.png", alt="icon")
+        .menu3
+          //- Vedvarende energi
+          ul(data-menu="vedvarende_energi.html")
+            a(href="#solceller")
+              li Solceller
+            a(href="#solvarme")
+              li Solvarme
+            a(href="#stokerfyr")
+              li Stokerfyr
+            a(href="#jordvarme")
+              li Jordvarme
+            a(href="#varmepumper")
+              li Varmepumper
+          //- Alarm og sikring
+          ul(data-menu="alarm_og_sikring.html")
+            a(href="#")
+              li Alarm
+      header.header-mobile.grid.one-whole
+        .mobile-logo.grid.one-half
+          a(href="index.html")
+            img(src="assets/img/logo_desktop.png", alt="LOGO")
+        .search-mobile.grid.two-fifths
+          p.clearfix søg på verdo.dk
+          img(src="assets/img/icons/search.png", alt="icon")
+      navbar
+        .gw
+          .g
+            .navbar-mobile
+              ul
+                li#nav-mob-1 
+                  span.icon
+                    img(src="assets/img/icons/forside.png").icon-mobile--menu
+                  .clearfix
+                    a(href="index.html", title="") Forside
+                li#nav-mob-2 
+                  span.icon
+                    a(href="#popup-1", title="")
+                      img(src="assets/img/icons/omverdo.png").icon-mobile--menu
+                  .clearfix
+                    a(href="#popup-1", title="") Om Verdo
+                li#nav-mob-2-select 
+                  span.icon
+                    a(href="#popup-1", title="")
+                      img(src="assets/img/icons/omverdo.png").icon-mobile--menu
+                  .clearfix
+                    a(href="#popup-1", title="") Om Verdo
+                li#nav-mob-3 
+                  span.icon
+                    a(href="#popup-2", title="")
+                      img(src="assets/img/icons/mitverdo.png").icon-mobile--menu
+                  .clearfix
+                    a(href="#popup-2", title="") Mit Verdo
+                li#nav-mob-3-select 
+                  span.icon
+                    a(href="#popup-2", title="")
+                      img(src="assets/img/icons/mitverdo.png").icon-mobile--menu
+                  .clearfix
+                    a(href="#popup-2", title="") Mit Verdo
+                li#nav-mob-4
+                  span.icon
+                    a(href="#slidemenu", title="")
+                      img(src="assets/img/icons/produkter.png").icon-mobile--menu
+                  .clearfix
+                    a(href="#slidemenu", title="") Produkter
+        nav#slidemenu
+          ul
+            li 
+              a(href="") Privat
+              ul
+                li
+                  a(href="") El
+                li
+                  a(href="") Vand
+                li
+                  a(href="") Varme
+                li
+                  a(href="") Internet
+                li
+                  a(href="") Rådgivning
+                li
+                  a(href="") Vedvarende energi
+            li 
+              a(href="") Erhverv
+              ul
+                li
+                  a(href="") El
+                li
+                  a(href="") Vand
+                li
+                  a(href="index.html") Internet
+                li
+                  a(href="index.html") Rådgivning
+                li
+                  a(href="index.html") Vedvarende energi
+                li
+                  a(href="index.html") Alarm og sikring
+        #popup-1.tip
+          .popup1
+            a(href="#page").close-pop
+              p x
+            .about-pop--menu
+              img(src="assets/img/verdobygning.png").grid.one-whole
+              .grid.one-half
+                button(type="submit").btn.btn-green Om Verdo
+              .grid.one-half
+                button(type="submit").btn.btn-green Kontakt
+              .grid.one-half
+                button(type="submit").btn.btn-green Nyheder
+              .grid.one-half
+                button(type="submit").btn.btn-green Presse
+              .grid.one-half
+                button(type="submit").btn.btn-green Driftstatus
+              .grid.one-half
+                button(type="submit").btn.btn-green Jobs
+        #popup-2.tip          
+          a(href="#page").close-pop 
+            p x
+          form(role="form")
+            .login
+              p For at benytte Verdos selvbetjening skal du være logget ind.
+              br
+              input(placeholder="Brugernavn").form-control
+              input(placeholder="Password").form-control
+              button(type="submit").btn.btn-login Login
+          img(src="assets/img/shaddow.png").shaddow-bottom
+      #content
+          != content
+      //- FOOTER CONTENT HERE
+      footer.footer--desktop.one-whole
+        img(src="assets/img/footer.png", alt="LOL")
+    != getBlock("scripts").toHTML()

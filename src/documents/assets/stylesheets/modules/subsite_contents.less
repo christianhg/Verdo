@@ -1,0 +1,66 @@
+.carousel{
+	font-size: 9rem;
+	line-height: 5rem;
+}
+.carousel, .carousel-mobile {
+	font-family: @verdo;
+	
+	p{
+		position: relative;
+		top: 10px;
+		color: grey;
+		text-align: center;
+	}
+}
+/* INDEX SUBCONTENT */
+.subcontent{
+	.subcontent--box{
+		margin-right: 5%;
+		&:last-child{
+			margin-right: 0%;
+		}
+	}
+}
+.productCarousel {
+	position: relative;
+	top: 20px;
+	padding-bottom: 60px;
+	margin: auto;
+
+	//.css-gradient(@blue, @bluelight); bugger!
+}
+
+.buttons {
+	position: absolute;
+	bottom: 60px;
+}
+
+.contentArea {
+	position: relative;
+	z-index: 1;
+
+	font-family: @verdo;
+
+	.buttons{
+		width: 45%;
+
+		.btn {
+			padding: 15px 0 15px 0;
+			width: 40%;
+			margin: 0 5%;
+
+			color: white;
+			.box-shadow(0 0 5px rgba(0, 0, 0, 0.3));
+
+			font-family: @verdo;
+		}
+		.btn1{
+			//background-color: green;
+			.css-gradient( @greenlight, @green);
+		}
+		.btn2{
+			background-color: orange;
+			.css-gradient( orange, darken(orange, 20%));
+		}
+	}
+}
